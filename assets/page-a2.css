@@ -811,8 +811,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* ---------- 06 about ---------- */
 .about__kw {
-  display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 18px; margin-bottom: 48px;
-  font-weight: 700; font-size: clamp(26px, 5vw, 56px); line-height: 1.35; letter-spacing: 0.04em;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px; margin-bottom: 40px;
+  font-weight: 700; font-size: clamp(21px, 3.4vw, 38px); line-height: 1.4; letter-spacing: 0.04em;
   font-feature-settings: "palt";
 }
 .kw { display: inline-block; overflow: hidden; padding-bottom: 0.1em; margin-bottom: -0.1em; }
@@ -987,6 +987,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
    reserved before it loads and nothing is cropped */
 .wk__shot { position: relative; overflow: hidden; border-radius: 20px; background: var(--color-surface); }
 .wk__img { display: block; width: 100%; height: auto; transition: transform 0.8s var(--ease-out); }
+/* a reel is 9:16; in the grid it is shown at the same height as the feed posts,
+   trimmed from the top and bottom. The work's own page still shows it whole. */
+.wk__shot--tall { aspect-ratio: 4 / 5; }
+.wk__shot--tall .wk__img { height: 100%; object-fit: cover; object-position: center; }
 .wk__link:hover .wk__img { transform: scale(1.04); }
 .wk__blank {
   display: grid; place-items: center; aspect-ratio: 4 / 5; margin: 10px;
