@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kazuki0806.github.io/riki-design/sitemap.xml
